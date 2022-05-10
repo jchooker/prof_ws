@@ -1,0 +1,11 @@
+@media only screen and (min-width: 768px) {
+    
+    .medium-6 {width: 40vw;}
+    .medium-12 {width: 80vw;}
+
+    .limited {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

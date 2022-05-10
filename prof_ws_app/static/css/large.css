@@ -1,0 +1,7 @@
+@media only screen and (min-width: 1024px) {
+    
+    .large-3 {width: 30vw;}
+    .large-6 {width: 60vw;}
+
+    .limited {display: inline-block;}
+}

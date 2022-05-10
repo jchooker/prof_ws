@@ -1,0 +1,361 @@
+:root { /*MODIFY BORDER RADIUS RATIO FOR "SKINNIER" MODES??*/
+    /* --radius-ratio: 1vw/2vh; */
+    --radius-ratio: 4%;
+    --radius-ratio-2: 2% 2% 2% 2%/ 4% 4% 4% 4%;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: solid 1px greenyellow;
+}
+
+html {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header {
+    padding-left: 3vw;
+}
+
+body {
+    font-family: 'Murecho', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+main {
+    padding: 0 0 0 2vw;
+}
+
+.row {
+    clear: both;
+}
+
+.column {
+    float: left;
+    padding: 0;
+    margin: 1.5rem 1.5rem 0.75rem 0;
+}
+
+.small-12 {
+    width: 90vw;
+}
+
+/* .small-12-2 { INTRODUCE SOME OTHER SCALING OPTION??
+    max-width: 90vw;
+    max-height: 50vh;
+} */
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.limited {
+    max-width: 95vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* HOW TO MAKE THIS ONLY HAPPEN IN MEDIUM TO SMALL SIZE SCREENS!!!*/
+}
+
+/*FOR 05/03 AND ONWARDS --- FIG OUT HOW TO MAKE THE HEIGHT OF THE ALL IMAGES BE THE SAME WHEN IN SMALL SCREEN MODE*/
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-ratio);
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+    -webkit-transform:scale(1.05);
+    overflow: hidden;
+    border-radius: var(--radius-ratio);
+}
+
+.img-1 {
+    border-radius: var(--radius-ratio);
+    display: block;
+    width: 100%;
+    transition: 0.2s all ease;
+}
+
+.img-overlay {
+    /* margin: 0 0 0 2vw; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    border-radius: var(--radius-ratio);
+    -webkit-border-radius: var(--radius-ratio);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.img-overlay > * {
+    transform: translateY(5vh);
+    transition: transform 0.2s;
+}
+
+.img-overlay:hover {
+    opacity: 1;
+    border-radius: var(--radius-ratio);
+}
+
+.img-overlay:hover > * {
+    transform: translateY(0);
+}
+
+.image-container-2 {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: var(--radius-ratio-2);
+}
+
+.image-container-2 img {
+    width: 100%;
+    transition: 0.2s all ease;
+}
+
+.image-container-2:hover img {
+    transform: scale(1.05);
+    -webkit-transform:scale(1.05);
+    overflow: hidden;
+    border-radius: var(--radius-ratio);
+}
+
+.img-2 {
+    border-radius: var(--radius-ratio-2);
+    display: block;
+    width: 100%;
+}
+
+.img-overlay-2 {
+    /* margin: 0 0 0 2vw; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    border-radius: var(--radius-ratio-2);
+    -webkit-border-radius: var(--radius-ratio-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.img-overlay-2 > * {
+    transform: translateY(5vh);
+    transition: transform 0.2s;
+}
+
+.img-overlay-2:hover {
+    opacity: 1;
+}
+
+.img-overlay-2:hover > * {
+    transform: translateY(0);
+}
+
+.img-desat {
+    filter: none;
+    -webkit-filter: grayscale(30%);
+    -moz-filter:    grayscale(30%);
+    -ms-filter:     grayscale(30%);
+    -o-filter:      grayscale(30%);
+    cursor: pointer;
+}
+
+.img-desat-2 {
+    filter: none;
+    -webkit-filter: grayscale(12%);
+    -moz-filter:    grayscale(12%);
+    -ms-filter:     grayscale(12%);
+    -o-filter:      grayscale(12%);
+    cursor: pointer;
+}
+
+.row-2-container {
+    min-height: 40vh;
+}
+
+.image-container-3 {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: var(--radius-ratio-2);
+}
+
+.image-container-3 img {
+    width: 100%;
+    transition: 0.2s all ease;
+}
+
+.image-container-3:hover img {
+    transform: scale(1.05);
+    -webkit-transform:scale(1.05);
+    overflow: hidden;
+    border-radius: var(--radius-ratio);
+}
+
+.img-3 {
+    border-radius: var(--radius-ratio-2);
+    display: block;
+    width: 100%;
+}
+
+.img-overlay-3 {
+    /* margin: 0 0 0 2vw; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    border-radius: var(--radius-ratio-2);
+    -webkit-border-radius: var(--radius-ratio-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.img-overlay-3 > * {
+    transform: translateY(5vh);
+    transition: transform 0.2s;
+}
+
+.img-overlay-3:hover {
+    opacity: 1;
+}
+
+.img-overlay-3:hover > * {
+    transform: translateY(0);
+}
+
+.img-4 {
+    border-radius: var(--radius-ratio);
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: invert(100%);
+}
+
+/* MATTHEW: SEE SELECTORS CHEAT SHEET (IMG 4 HEIGHT PROBLEM) --DISCORD???   */
+
+.image-container-4 {
+    position: relative;
+    z-index: 1;
+    border-radius: var(--radius-ratio);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    background-color: #606060;
+}
+
+.image-container-4 img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.image-container-4:hover img {
+    border-radius: var(--radius-ratio);
+}
+
+.res-icon-container {
+    width: 100%;
+    height: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* height: 100%; */
+    /* position: relative; */
+}
+
+.res-icon-container img {
+    /* position: absolute; */
+    width: 100%;
+    
+    /* height: 60%;
+    top: 20%;
+    left: 20%; */
+}
+
+.img-overlay-4 {
+    /* margin: 0 0 0 2vw; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    border-radius: var(--radius-ratio);
+    -webkit-border-radius: var(--radius-ratio);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.img-overlay-4 > * {
+    transform: translateY(5vh);
+    transition: transform 0.2s;
+}
+
+.img-overlay-4:hover {
+    opacity: 1;
+}
+
+.img-overlay-4:hover > * {
+    transform: translateY(0);
+}
+
+main {
+    background-color: #9b87b8;
+    font-size: 1.2em;
+    min-height: 40vh;
+}
+
+main h2, h4 {
+    color: whitesmoke;
+    margin: 1rem 0 0.3rem 0;
+}
+
+main h2 {
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+footer {
+    color:	#383838;
+    display: flex;
+    justify-content: center;
+}
