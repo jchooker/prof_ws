@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<body class="about-me-body">
+    <header>
+        <div class="header-top">
+            <h1>
+                About Me
+            </h1>
+            <a href="/" class="link-format">
+                <h2>
+                    Home
+                </h2>
+            </a>
+        </div>
+        <div class="header-bottom">
+            <img src="{% static 'img/joe_cropped_thumbnail.jpg' %}" alt="joe" class="joe-thumb">
+        </div>
+    </header>
+    <main>
+        <p>
+            Hi. My name is Joseph Hooker. I am from the Memphis, TN area. During childhood, I remember computers being a domain of 
+            nerd esoterica, that could often seem opaque. 14.4 kbps dial-up, Netscape, Prodigy, etc etc.
+        </p>
+    </main>
+</body>
+{% endblock %}

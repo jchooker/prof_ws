@@ -9,6 +9,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     outline: solid 1px greenyellow;
+    color: #355E3B;
 }
 
 html {
@@ -57,11 +58,6 @@ main {
     width: 90vw;
 }
 
-/* .small-12-2 { INTRODUCE SOME OTHER SCALING OPTION??
-    max-width: 90vw;
-    max-height: 50vh;
-} */
-
 .clearfix::after {
     /* content: "";
     display: table;
@@ -74,10 +70,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* HOW TO MAKE THIS ONLY HAPPEN IN MEDIUM TO SMALL SIZE SCREENS!!!*/
 }
-
-/*FOR 05/03 AND ONWARDS --- FIG OUT HOW TO MAKE THE HEIGHT OF THE ALL IMAGES BE THE SAME WHEN IN SMALL SCREEN MODE*/
 
 .image-container {
     position: relative;
@@ -157,7 +150,6 @@ main {
 }
 
 .img-overlay-2 {
-    /* margin: 0 0 0 2vw; */
     position: absolute;
     top: 0;
     left: 0;
@@ -212,14 +204,8 @@ main {
 
 .image-container-3 {
     position: relative;
-    /* z-index: 1; */
     overflow: hidden;
     border-radius: var(--radius-ratio-2);
-    /* display: flex;
-    height: 100%;
-    align-items: center;
-    top: 0;
-    left: 0; */
 }
 
 .image-container-3 img {
@@ -241,7 +227,6 @@ main {
 }
 
 .img-overlay-3 {
-    /* margin: 0 0 0 2vw; */
     position: absolute;
     top: 0;
     left: 0;
@@ -274,8 +259,6 @@ main {
 
 .img-4 {
     border-radius: var(--radius-ratio);
-    /* display: block; */
-    /* height: 100%; */
     filter: invert(100%);
     height: 60%;
     width: 60%;
@@ -287,7 +270,6 @@ main {
     border-radius: var(--radius-ratio);
     overflow: hidden;
     min-height: 30vw;
-    /* height: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -321,43 +303,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    /* height: 100%; */
-    /* position: relative; */
 }
-
-.res-icon-container img {
-    /* position: absolute; */
-    /* width: 100%; */
-    
-    /* height: 60%;
-    top: 20%;
-    left: 20%; */
-}
-
-/* .img-4:hover {
-    animation: bounce 1s linear;
-}
-
-@keyframes bounce{
-    20%, 50%, 80%, to {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-4vh);
-    }
-    70% {
-        transform: translateY(-2vh);
-    }
-    90% {
-        transform: translateY(-1vh);
-    }
-} */
 
 .img-overlay-4 {
-    /* margin: 0 0 0 2vw; */
     position: absolute;
     top: 0;
     left: 0;
@@ -433,4 +381,46 @@ footer {
     color:	#383838;
     display: flex;
     justify-content: center;
+}
+
+/*ABOUT ME*/
+
+.about-me-body {
+    margin: 0 2vw 1vw 2vw;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.joe-thumb {
+    height: 6%;
+    width: 6%;
+    border-radius: var(--radius-ratio);
+    animation: 0.7s ease-in-out 0s 1 slideInFromRight, 0.7s ease-in-out 0s 1 appears;
+    transition: opacity 0.5s;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes appears {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.link-format {
+    text-decoration: none;
 }

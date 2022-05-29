@@ -8,5 +8,5 @@ def index(request):
     return render(request, 'index.html', context)
 # Create your views here.
 
-def about(request):
-    return render(request, "about.html")
+def aboutMe(request):
+    return render(request, "about-me.html")
