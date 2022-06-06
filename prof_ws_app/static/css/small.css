@@ -20,21 +20,29 @@ html {
 
 header {
     padding-left: 3vw;
+    /* box-shadow: 2vh 2vh .5vh 1vh black; */
+}
+
+.one-edge-shadow {
+    box-shadow: inset 0 8px 6px -6px black;
 }
 
 body {
     font-family: 'Murecho', sans-serif;
     font-size: 16px;
     font-weight: 400;
+    background-color: #A2B2C2;
 }
 
 main {
     padding: 0 0 0 2vw;
 }
 
+.wrapper {
+    margin: 0 2vw 1vw 2vw;
+}
+
 .row {
-    /* clear: both; */
-    /* display: flex; */
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 1fr 2fr;
@@ -357,9 +365,10 @@ main {
 }
 
 main {
-    background-color: #9b87b8;
-    font-size: 1.2em;
+    background-color: lightslategray;
     min-height: 40vh;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
 }
 
 main h2, h4 {
@@ -385,26 +394,54 @@ footer {
 
 /*ABOUT ME*/
 
-.about-me-body {
+/* .about-me-body {
     margin: 0 2vw 1vw 2vw;
-}
+} */
 
 .header-top {
     display: flex;
     justify-content: space-between;
+    height: 12vh;
+    padding-top: 1vh;
+}
+
+.header-top-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-top-left h1 {
+    float: left;
+    margin-right: 1vw;
 }
 
 .joe-thumb {
-    height: 6%;
-    width: 6%;
+    height: 100%;
     border-radius: var(--radius-ratio);
     animation: 0.7s ease-in-out 0s 1 slideInFromRight, 0.7s ease-in-out 0s 1 appears;
+    opacity: 0.6;
+    transition: opacity 0.5s;
+}
+
+.sb2-thumb {
+    height: 100%;
+    border-radius: var(--radius-ratio-2);
+    animation: 0.7s ease-in-out 0s 1 slideInFromRight, 0.7s ease-in-out 0s 1 appears;
+    opacity: 0.6;
+    transition: opacity 0.5s;
+}
+
+.hend2-thumb {
+    height: 100%;
+    border-radius: var(--radius-ratio-2);
+    animation: 0.7s ease-in-out 0s 1 slideInFromRight, 0.7s ease-in-out 0s 1 appears;
+    opacity: 0.6;
     transition: opacity 0.5s;
 }
 
 @keyframes slideInFromRight {
     0% {
-        transform: translateX(100%);
+        transform: translateX(200%);
     }
     100% {
         transform: translateX(0);
@@ -416,11 +453,31 @@ footer {
         opacity: 0;
     }
 
+    50% {
+        opacity: 0.1;
+    }
+
     100% {
-        opacity: 1;
+        opacity: 0.6;
     }
 }
 
 .link-format {
     text-decoration: none;
+}
+
+.pad-top {
+    padding-top: 1.5vh;
+}
+
+.text-para-lt {
+    color: whitesmoke;
+}
+
+.p-margin1 {
+    margin-right: 2vw;
+}
+
+.i-destyle {
+    color: whitesmoke;
 }

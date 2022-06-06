@@ -30,8 +30,22 @@
     <link rel="stylesheet" href="{% static 'css/medium.css' %}">
     <link rel="stylesheet" href="{% static 'css/large.css' %}">
 </head>
-    {% block page_content %} 
-            <p class="display-1">this isbase.html</p>
-    {% endblock page_content %} 
-</body>
+    <body>
+        <div class="wrapper">
+            <header>
+                {% block top %}
+                {% endblock %}
+            </header>
+            <main class="clearfix one-edge-shadow">
+            {% block middle %} 
+            {% endblock %} 
+            </main>
+            <footer>
+                {% block bottom %}
+                {% endblock %}
+                <p class="copy-txt">&copy; 2022 Joseph Hooker</p>
+            </footer>
+            <script src="{% static 'js/main.js' %}"></script>
+        </div>
+    </body>
 </html>

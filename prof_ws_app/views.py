@@ -10,3 +10,9 @@ def index(request):
 
 def aboutMe(request):
     return render(request, "about-me.html")
+
+def projects(request):
+    return render(request, 'projects.html')
+
+def education(request):
+    return render(request, "education.html")

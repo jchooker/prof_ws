@@ -1,14 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
-{% block page_content %}
-<body>
-    <header>
-        <h1>Joseph Hooker: Professional Site</h1>
-    </header>
-    <nav>
 
-    </nav>  
-    <main class="clearfix">
+{% block top %}
+<h1>Joseph Hooker: Professional Site</h1>
+{% endblock %}
+
+{% block middle %}
         <div class="row limited">
             <section class="column small-12 medium-6 large-3 image-container"> 
                 <img src="{% static 'img/joe_cropped.jpg' %}" alt="joe" class="img-1 height-fix">
@@ -18,7 +15,7 @@
             </section>
             <section class="column small-12 medium-12 large-6 image-container-2">
                 <img src="{% static 'img/sb2.png' %}" alt="projs" class="img-2 img-desat">
-                <a href="#" class="img-overlay-2">
+                <a href="/projects" class="img-overlay-2">
                     <h2 class="img-title-2">Technical Projects</h2>
                 </a>
             </section>
@@ -26,7 +23,7 @@
         <div class="row limited row-2-container">
             <section class="column small-12 medium-12 large-6 image-container-3">
                 <img src="{% static 'img/hend2.png' %}" alt="hend" class="img-3 img-desat-2">
-                <a href="#" class="img-overlay-3">
+                <a href="/education" class="img-overlay-3">
                     <h2>Education</h2>
                 </a>
             </section>
@@ -40,12 +37,6 @@
                 </div>
             </section>
         </div>
-    </main>
-    <footer>
-        <p class="copy-txt">&copy; 2022 Joseph Hooker</p>
-    </footer>
-    <script src="{% static 'js/main.js' %}"></script>
-
-</body>
-
-{% endblock %}
+        {% endblock %}
+        {% block bottom %}
+        {% endblock %}

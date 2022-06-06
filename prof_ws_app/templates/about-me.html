@@ -1,27 +1,41 @@
 {% extends "base.html" %}
 {% load static %}
-{% block page_content %}
-<body class="about-me-body">
-    <header>
-        <div class="header-top">
-            <h1>
-                About Me
-            </h1>
-            <a href="/" class="link-format">
-                <h2>
-                    Home
-                </h2>
-            </a>
-        </div>
-        <div class="header-bottom">
-            <img src="{% static 'img/joe_cropped_thumbnail.jpg' %}" alt="joe" class="joe-thumb">
-        </div>
-    </header>
-    <main>
-        <p>
-            Hi. My name is Joseph Hooker. I am from the Memphis, TN area. During childhood, I remember computers being a domain of 
-            nerd esoterica, that could often seem opaque. 14.4 kbps dial-up, Netscape, Prodigy, etc etc.
+{% block top %}
+<div class="header-top">
+    <div class="header-top-left">
+        <h1>
+            About Me
+        </h1>
+        <img src="{% static 'img/joe_cropped_thumbnail.jpg' %}" alt="joe" class="joe-thumb">
+    </div>
+    <a href="/" class="link-format">
+        <h2>
+            Home
+        </h2>
+    </a>
+</div>
+<!-- <div class="header-bottom">
+    <img src="{% static 'img/joe_cropped_thumbnail.jpg' %}" alt="joe" class="joe-thumb">
+</div> -->
+{% endblock %}
+{% block middle %}
+        <p class="pad-top text-para-lt p-margin1">
+            Hi. My name is Joseph Hooker. I am from the Memphis area. During childhood, I remember computers being a domain of 
+            nerd esoterica. 14.4 kbps dial-up, Netscape, Prodigy, etc etc. Things that happened behind
+            the scenes in technology were opaque: neon-green alphanumerical runes ordered in lines on a black command-line terminal.<br><br>
+            
+            I began programming in 2004, with Java, HTML, and CSS. Much of what I found unapproachable about programming persisted. I 
+            did not continue in the field, earning a B.A. in Art from Hendrix College instead. But when I picked up coding again
+            in 2019, a number of things had changed in the tech industry. <br><br>
+            
+            I am currently working on a Master's in Computer Science at the 
+            University of Arkansas - Little Rock, and have recently completed a Web Development program at the Coding Dojo bootcamp,
+            which provided the hands-on experience in Python, HTML, CSS, JavaScript, and so on, that I had so desired. <br><br>
+
+            I live in the Little Rock area with my wife, Emily, and our dog, Butler. I am a freelance web developer and also work
+            in print production.
         </p>
-    </main>
-</body>
+
+{% endblock %}
+{% block bottom %}
 {% endblock %}
